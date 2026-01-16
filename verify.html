@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Certificate Verification</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #e6f0ff, #ffffff);
+      margin: 0;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: auto;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    .school {
+      text-align: center;
+      font-size: 14px;
+      color: #004aad;
+      font-weight: bold;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 14px;
+    }
+
+    .label {
+      color: #555;
+    }
+
+    .value {
+      font-weight: bold;
+      text-align: right;
+      color: #111;
+    }
+
+    .status {
+      margin-top: 25px;
+      padding: 14px;
+      text-align: center;
+      font-weight: bold;
+      color: #004085;
+      background: #cce5ff;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="card">
+
+      <h2>CERTIFICATE VERIFICATION</h2>
+      <div class="school">MULTIMEDIA MEDIA UNIVERSITY</div>
+
+      <div class="row">
+        <div class="label">Full Name</div>
+        <div class="value">MARGARET GITAU</div>
+      </div>
+
+      <div class="row">
+        <div class="label">Registration Number</div>
+        <div class="value">Mcs-133-076/2020</div>
+      </div>
+
+      <div class="row">
+        <div class="label">Certificate Number</div>
+        <div class="value" id="certNo">008696</div>
+      </div>
+
+      <div class="row">
+        <div class="label">Programme</div>
+        <div class="value">Diploma in Journalism</div>
+      </div>
+
+      <div class="status">
+        STATUS: VALID
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    if (id) {
+      document.getElementById("certNo").textContent = id;
+    }
+  </script>
+
+</body>
+</html>
